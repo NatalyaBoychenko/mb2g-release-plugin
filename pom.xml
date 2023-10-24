@@ -4,15 +4,15 @@
 
     <groupId>guru.springframework</groupId>
     <artifactId>mb2g-release-plugin</artifactId>
-    <version>1.18-SNAPSHOT</version>
+    <version>1.18</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>11</java.version>
+        <java.version>18</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <junit.version>5.3.2</junit.version>
+        <junit.version>5.10.0</junit.version>
         <project.scm.id>github</project.scm.id>
     </properties>
 
@@ -32,10 +32,10 @@
     </dependencies>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/springframeworkguru/mb2g-release-plugin.git</developerConnection>
-        <url>https://github.com/springframeworkguru/mb2g-release-plugin</url>
-        <tag>HEAD</tag>
-    </scm>
+        <developerConnection>scm:git:https://github.com/NatalyaBoychenko/mb2g-release-plugin.git</developerConnection>
+        <url>https://github.com/NatalyaBoychenko/mb2g-release-plugin</url>
+      <tag>mb2g-release-plugin-1.18</tag>
+  </scm>
 
     <build>
         <extensions>
@@ -54,11 +54,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>3.0.1</version>
                 <configuration>
-
-                    <scmCommentPrefix>[maven-release-plugin] [skip ci]</scmCommentPrefix>
-
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
                 </configuration>
             </plugin>
         </plugins>
